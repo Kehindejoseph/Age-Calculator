@@ -1,13 +1,14 @@
 const userInput = document.getElementById("date");
 let result = document.getElementById("result");
 
-// This code sets the maximum allowed date for a user input to the current date by converting it to a string and extracting the date part. 
+// This code sets the maximum allowed date for a user input to the 
+//current date by converting it to a string and extracting the date part. 
 userInput.max = new Date().toISOString().split("T")[0];
-
+console.log(userInput.max)
 
 function calculateAge() {
     let birthDate = new Date(userInput.value);
-
+console.log(birthDate)
     let d1 = birthDate.getDay();
     let m1 = birthDate.getMonth() + 1; //because month starts counting from 0
     let y1  = birthDate.getFullYear();
